@@ -1,0 +1,81 @@
+﻿@model IEnumerable<PlanillaHorarios.ViewModels.PlanillaPersonaResumen>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Listado</h2>
+
+<div>
+@Html.ActionLink("Volver a lista", MVC.Planillas.VolverListado((int)ViewBag.IdPersona))
+</div>
+
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Dia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaSemana)
+        </th>
+
+        <th>
+            @Html.DisplayNameFor(model => model.MHoraEntrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MHoraSalida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THoraEntrada)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.THoraSalida)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Dia)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DiaSemana)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MHoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MHoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.THoraEntrada)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.THoraSalida)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Observaciones)
+            </td>
+
+            <td>
+                @if (item.EsDiaLaboral && !item.EsFeriado)
+                { @Html.ActionLink("Editar", "Edit", new { id = item.PlanillaId }) }
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div>
+    <div>
+       @Html.ActionLink("Volver a lista", MVC.Planillas.VolverListado((int)ViewBag.IdPersona))
+    </div>
+</div>

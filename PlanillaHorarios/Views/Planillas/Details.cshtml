@@ -1,0 +1,90 @@
+﻿@model PlanillaHorarios.Models.Planilla
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Planilla</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PersonaID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PersonaID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Anio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Anio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Mes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Mes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Observaciones)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Observaciones)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MHoraEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MHoraEntrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MHoraSalida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MHoraSalida)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THoraEntrada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THoraEntrada)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.THoraSalida)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.THoraSalida)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PlanillaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

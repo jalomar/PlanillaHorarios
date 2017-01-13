@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="PlanillaDataSet" targetNamespace="http://tempuri.org/PlanillaDataSet.xsd" xmlns:mstns="http://tempuri.org/PlanillaDataSet.xsd" xmlns="http://tempuri.org/PlanillaDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Web.config" AppSettingsPropertyName="PlanillaContext" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="PlanillaContext (Web.config)" ParameterPrefix="@" PropertyReference="AppConfig.System.Configuration.ConfigurationManager.0.ConnectionStrings.PlanillaContext.ConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PlanillaTableAdapter" GeneratorDataComponentClassName="PlanillaTableAdapter" Name="Planilla" UserDataComponentName="PlanillaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="PlanillaContext (Web.config)" DbObjectName="Planilla.dbo.Planilla" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Dia, MHoraEntrada, MHoraSalida, THoraEntrada, THoraSalida, Observaciones, Anio, Mes FROM dbo.Planilla</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Dia" DataSetColumn="Dia" />
+              <Mapping SourceColumn="MHoraEntrada" DataSetColumn="MHoraEntrada" />
+              <Mapping SourceColumn="MHoraSalida" DataSetColumn="MHoraSalida" />
+              <Mapping SourceColumn="THoraEntrada" DataSetColumn="THoraEntrada" />
+              <Mapping SourceColumn="THoraSalida" DataSetColumn="THoraSalida" />
+              <Mapping SourceColumn="Observaciones" DataSetColumn="Observaciones" />
+              <Mapping SourceColumn="Anio" DataSetColumn="Anio" />
+              <Mapping SourceColumn="Mes" DataSetColumn="Mes" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="PlanillaDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="PlanillaDataSet" msprop:Generator_UserDSName="PlanillaDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Planilla" msprop:Generator_TableClassName="PlanillaDataTable" msprop:Generator_TableVarName="tablePlanilla" msprop:Generator_TablePropName="Planilla" msprop:Generator_RowDeletingName="PlanillaRowDeleting" msprop:Generator_RowChangingName="PlanillaRowChanging" msprop:Generator_RowEvHandlerName="PlanillaRowChangeEventHandler" msprop:Generator_RowDeletedName="PlanillaRowDeleted" msprop:Generator_UserTableName="Planilla" msprop:Generator_RowChangedName="PlanillaRowChanged" msprop:Generator_RowEvArgName="PlanillaRowChangeEvent" msprop:Generator_RowClassName="PlanillaRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Dia" msprop:Generator_ColumnVarNameInTable="columnDia" msprop:Generator_ColumnPropNameInRow="Dia" msprop:Generator_ColumnPropNameInTable="DiaColumn" msprop:Generator_UserColumnName="Dia" type="xs:int" />
+              <xs:element name="MHoraEntrada" msprop:Generator_ColumnVarNameInTable="columnMHoraEntrada" msprop:Generator_ColumnPropNameInRow="MHoraEntrada" msprop:Generator_ColumnPropNameInTable="MHoraEntradaColumn" msprop:Generator_UserColumnName="MHoraEntrada" type="xs:int" minOccurs="0" />
+              <xs:element name="MHoraSalida" msprop:Generator_ColumnVarNameInTable="columnMHoraSalida" msprop:Generator_ColumnPropNameInRow="MHoraSalida" msprop:Generator_ColumnPropNameInTable="MHoraSalidaColumn" msprop:Generator_UserColumnName="MHoraSalida" type="xs:int" minOccurs="0" />
+              <xs:element name="THoraEntrada" msprop:Generator_ColumnVarNameInTable="columnTHoraEntrada" msprop:Generator_ColumnPropNameInRow="THoraEntrada" msprop:Generator_ColumnPropNameInTable="THoraEntradaColumn" msprop:Generator_UserColumnName="THoraEntrada" type="xs:int" minOccurs="0" />
+              <xs:element name="THoraSalida" msprop:Generator_ColumnVarNameInTable="columnTHoraSalida" msprop:Generator_ColumnPropNameInRow="THoraSalida" msprop:Generator_ColumnPropNameInTable="THoraSalidaColumn" msprop:Generator_UserColumnName="THoraSalida" type="xs:int" minOccurs="0" />
+              <xs:element name="Observaciones" msprop:Generator_ColumnVarNameInTable="columnObservaciones" msprop:Generator_ColumnPropNameInRow="Observaciones" msprop:Generator_ColumnPropNameInTable="ObservacionesColumn" msprop:Generator_UserColumnName="Observaciones" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Anio" msprop:Generator_ColumnVarNameInTable="columnAnio" msprop:Generator_ColumnPropNameInRow="Anio" msprop:Generator_ColumnPropNameInTable="AnioColumn" msprop:Generator_UserColumnName="Anio" type="xs:int" minOccurs="0" />
+              <xs:element name="Mes" msprop:Generator_ColumnVarNameInTable="columnMes" msprop:Generator_ColumnPropNameInRow="Mes" msprop:Generator_ColumnPropNameInTable="MesColumn" msprop:Generator_UserColumnName="Mes" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
